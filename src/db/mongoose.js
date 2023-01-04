@@ -7,6 +7,6 @@ const mongoose = require('mongoose');
 const validator = require('validator'); //npm library for validation
 
 //task-manager-api is database name
-mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api',{
+mongoose.connect(process.env.MONGODB_URL,{
     autoIndex: true,
 } )
